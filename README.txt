@@ -25,10 +25,6 @@ not included here.
 REPOSITORY CONTENTS
 --------------------------------------------------------------------------------
 
-paper/
-    paper_2_corrected.tex   Full manuscript source (REVTeX 4-2, PRD format)
-    thebibliography.bib     Bibliography (BibTeX)
-
 data/
     flyby_data.csv          Primary dataset: all nine documented Earth
                              flybys (Table I of the manuscript), machine-
