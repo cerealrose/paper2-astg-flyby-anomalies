@@ -1,0 +1,86 @@
+DATA DICTIONARY: flyby_data.csv
+================================================================================
+
+This file reproduces Table I of Nesvinga, Nyambuya & Jones (2026b),
+"Earth-Flyby Velocity Anomalies within the Azimuthally Symmetric Theory of
+Gravitation", in machine-readable form.
+
+COLUMNS
+--------------------------------------------------------------------------------
+spacecraft        Mission name.
+date              Date of closest approach (perigee), ISO 8601 (YYYY-MM-DD).
+h_p_km            Perigee altitude above the reference geoid, km.
+V_inf_kms         Hyperbolic excess speed, km/s. Blank for Rosetta II/III
+                  (unpublished).
+dVp_mms           Perigee velocity anomaly, mm/s. For the four anomalous
+                  flybys and the two control flybys (Galileo II,
+                  MESSENGER), this is DERIVED from Anderson et al. (2008)
+                  Table I's dV_infinity via the vis-viva scaling
+                  dVp = (V_infinity/V_p) * dV_infinity -- Anderson (2008)
+                  does not report dVp directly. For Rosetta II/III, 0.0
+                  denotes "consistent with zero" (their own words), not a
+                  precise measurement. For Juno, 0.200 is the published
+                  UPPER LIMIT (< 0.200 mm/s), not a central value.
+sigma_mms         1-sigma uncertainty on dVp, mm/s, derived by the same
+                  vis-viva scaling applied to Anderson (2008)'s
+                  sigma(dV_infinity). Blank where not applicable
+                  (Rosetta II/III).
+delta_in_deg      Inbound (approach) geocentric declination of the
+                  spacecraft's osculating velocity vector, degrees.
+delta_out_deg     Outbound (departure) geocentric declination, degrees.
+anomalous         True for the four flybys with a statistically
+                  significant velocity anomaly (Galileo I, NEAR, Cassini,
+                  Rosetta I); False otherwise.
+source            Primary literature source(s) for this row.
+
+PRIMARY SOURCES
+--------------------------------------------------------------------------------
+Anderson2008    J. D. Anderson, J. K. Campbell, J. E. Ekelund, J. Ellis,
+                and J. F. Jordan, "Anomalous orbital-energy changes
+                observed during spacecraft flybys of Earth," Physical
+                Review Letters 100, 091102 (2008). Table I. The
+                foundational source for Galileo I, Galileo II, NEAR,
+                Cassini, Rosetta I, and MESSENGER: h_p, V_infinity,
+                dV_infinity, sigma(dV_infinity), and both declinations.
+
+Jouannic2015    B. Jouannic, R. Noomen, and J. A. A. van den IJssel,
+                "The flyby anomaly: An investigation into potential
+                causes," Proc. 25th International Symposium on Space
+                Flight Dynamics (ISSFD), paper 153 (2015). Extends the
+                inventory to twelve encounters, including Galileo II and
+                Juno.
+
+Antreasian1998  P. G. Antreasian and J. R. Guinn, "Investigations into the
+                unexpected delta-V increase during the Earth gravity
+                assist of Galileo and NEAR," AIAA/AAS Astrodynamics
+                Specialist Conference, paper AIAA 98-4287 (1998).
+                Independent confirmation of the Galileo and NEAR dVp
+                values; source of the Juno upper limit as used here.
+
+ESA_Ros90,      European Space Agency Rosetta Mission Status Reports
+ESA_Ros124      No. 90 (2007) and No. 124 (2009). Perigee times and
+                altitudes for Rosetta II and Rosetta III.
+
+JPL Horizons    Declinations for Rosetta II and Rosetta III were
+                independently verified against JPL Horizons ephemerides
+                (see the manuscript, Sec. III.D); agreement with the
+                literature values used here is within 1% for every flyby
+                with published data.
+
+NOTES ON DATA PROVENANCE AND CORRECTIONS
+--------------------------------------------------------------------------------
+An earlier secondary source's transcription of Anderson (2008) had two
+errors, both corrected in this file and traceable via
+scripts/03_anderson2008_data_correction.py:
+
+  * Cassini's V_infinity was given as 1.601 km/s (a decimal-point error;
+    the correct value, self-consistent with Cassini's own r_p and
+    eccentricity via the standard hyperbolic-orbit relation, is
+    16.010 km/s).
+  * Cassini's dVp and Galileo I's sigma were each off by a factor of
+    several, traced to the same secondary source rather than to
+    Anderson (2008) itself.
+
+Every value in this file has been independently re-derived directly from
+Anderson (2008)'s own published Table I; see the verification script for
+the full row-by-row reproduction.

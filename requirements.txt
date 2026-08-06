@@ -1,0 +1,6 @@
+# Python dependencies for the scripts in scripts/
+# Tested with Python 3.12; earlier versions of each package are very
+# likely to also work, as none of the scripts rely on recent API additions.
+
+numpy>=1.24
+scipy>=1.10

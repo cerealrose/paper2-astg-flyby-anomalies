@@ -1,0 +1,56 @@
+This repository uses two licenses for two different kinds of content.
+
+================================================================================
+CODE (scripts/*.py): MIT License
+================================================================================
+
+MIT License
+
+Copyright (c) 2026 P. A. Nesvinga, G. G. Nyambuya, B. C. Jones
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+================================================================================
+DATA (data/flyby_data.csv, data/DATA_DICTIONARY.txt): CC-BY-4.0
+================================================================================
+
+The compiled dataset in data/ -- a machine-readable transcription and
+re-derivation of values from the published sources cited in
+DATA_DICTIONARY.txt -- is made available under the Creative Commons
+Attribution 4.0 International License (CC-BY-4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt this compiled dataset for any purpose,
+provided you give appropriate credit to this repository AND to the
+original primary sources listed in DATA_DICTIONARY.txt (principally
+Anderson et al. 2008, Physical Review Letters 100, 091102), since this
+file is a derived compilation, not original observational data.
+
+================================================================================
+MANUSCRIPT TEXT (paper/paper_2_corrected.tex and the compiled PDF)
+================================================================================
+
+Neither license above applies to the manuscript text. The manuscript is
+the copyright of its authors and is provided here for transparency and
+reproducibility pending peer review. Upon acceptance, copyright will be
+handled per Physical Review D's standard author agreement with the
+American Physical Society; authors retain the rights customary under that
+agreement (including posting preprints and accompanying materials such as
+this repository). Please cite the published version once available; see
+CITATION.cff.
