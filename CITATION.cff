@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the manuscript below. A full published citation will be added upon acceptance by Physical Review D."
+title: "Earth-Flyby Velocity Anomalies within the Azimuthally Symmetric Theory of Gravitation"
+type: software
+authors:
+  - family-names: Nesvinga
+    given-names: P. A.
+    email: praise.nesvinga@nust.ac.zw
+    affiliation: "Department of Applied Physics, National University of Science & Technology"
+  - family-names: Nyambuya
+    given-names: G. G.
+    email: golden.nyambuya@nust.ac.zw
+    affiliation: "Department of Applied Physics, National University of Science & Technology"
+  - family-names: Jones
+    given-names: B. C.
+    email: amabooksbyo@gmail.com
+    affiliation: "Department of Applied Mathematics, National University of Science & Technology"
+date-released: 2026-08-06
+repository-code: "https://github.com/cerealrose/paper2-astg-flyby-anomalies"
+license: MIT
+preferred-citation:
+  type: unpublished
+  title: "Earth-Flyby Velocity Anomalies within the Azimuthally Symmetric Theory of Gravitation"
+  authors:
+    - family-names: Nesvinga
+      given-names: P. A.
+    - family-names: Nyambuya
+      given-names: G. G.
+    - family-names: Jones
+      given-names: B. C.
+  year: 2026
+  notes: "Preprint, NUST Fundamental Theoretical Physics Group. Submitted to Physical Review D; update this entry with the DOI/journal reference once published."
+references:
+  - type: unpublished
+    title: "Plausible Origins of the Earth Flyby Anomalies at the Perigee Point"
+    authors:
+      - family-names: Nesvinga
+        given-names: P. A.
+      - family-names: Nyambuya
+        given-names: G. G.
+      - family-names: Jones
+        given-names: B. C.
+    year: 2026
+    notes: "Companion paper (separate repository); establishes the theoretical formula tested here."
