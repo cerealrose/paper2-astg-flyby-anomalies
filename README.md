@@ -82,8 +82,8 @@ Inputs and settings of the scripts:
 
 ## Earlier version
 
-The scripts that accompanied an earlier version of the manuscript are kept in the history of this repository under the
-tag `v1`.
+The scripts that accompanied an earlier version of the manuscript are kept in the history of this repository, at commit
+[`f0d0bb4`](https://github.com/cerealrose/paper2-astg-flyby-anomalies/tree/f0d0bb4).
 
 ## Licence and citation
 
