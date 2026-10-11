@@ -55,6 +55,6 @@ if __name__ == '__main__':
     print(f"  suppression required to reach the observed limit: {j['required_suppression']:.2f} mm/s")
     a = appendix_a()
     print('\nAppendix A')
-    print(f"  rp = {a['rp']:.4e} m;  Vp^2 = {a['vinf2']:.4e} + {a['grav']:.4e} = {a['vp2']:.4e} m^2/s^2;  Vp = {a['vp'] / 1e3:.3f} km/s")
+    print(f"  rp = {a['rp']:.4e} m;  Vp^2 = {a['vinf2']:.5e} + {a['grav']:.5e} = {a['vp2']:.5e} m^2/s^2;  Vp = {a['vp'] / 1e3:.3f} km/s")
     print(f"  eps = 1 + {a['eps_minus_1']:.3f} = {1 + a['eps_minus_1']:.3f};  dcos = {a['cos_in']:.5f} - {a['cos_out']:.5f} = {a['dcos']:+.4f}")
     print(f"  Rg = {a['rg']:.3e} m;  dVp = 14931 (3902)(8.870e-3)(0.1977) / [2 (6.9325e6)(3.877)] = {a['dvp']:+.2f} mm/s")

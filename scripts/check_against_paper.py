@@ -182,7 +182,7 @@ check('Sec. 5.5 co-rotation lowers the impulse by (%)', (1 - jd_['dv'] / jd_['dv
 check('Sec. 5.5 local scale height (km)', jd_['H'], 62.8, 1)
 check('Sec. 5.5 single exponential, % less (inertial)', (1 - jd_['exp_inertial'] / jd_['dv_inertial']) * 100, 5, 0)
 check('Sec. 5.5 single exponential, % less (relative speed)', (1 - jd_['exp_relative'] / jd_['dv']) * 100, 5, 0)
-check('Sec. 5.5 / Table 6 drag, factor short of the required 1.70', j['required_suppression'] / jd_['dv'], 13, 0)
+check('Sec. 5.5 / Table 6 drag, factor short of Eq. (5)', j['prediction'] / jd_['dv'], 14, 0)
 check('Sec. 5.6 Iorio (2009) signed total (mm/s)', sum(IORIO_2009.values()), 0.0016, 4)
 check('Sec. 5.7 required suppression (mm/s)', j['required_suppression'], 1.70, 2)
 rows6, pred6, need6 = table6()
@@ -193,8 +193,13 @@ check('Table 6 atmospheric drag (mm/s)', v6['Atmospheric drag'], 0.132, 3)
 check('Table 6 relativistic and classical (mm/s)', v6['Relativistic and classical'], 0.0016, 4)
 check_true('Table 6 spacecraft spin of order 1e-8 mm/s', round(np.log10(v6['Spacecraft spin'])) == -8, f"{v6['Spacecraft spin']:.2e}")
 check_true('Table 6 l = 2 multipole of order 1e-10 mm/s', round(np.log10(v6['l = 2 multipole'])) == -10, f"{v6['l = 2 multipole']:.2e}")
-print('INFO  orders of magnitude below the required suppression: ' +
-      ', '.join(f"{n} {np.log10(need6 / v):.1f}" for n, k, v in rows6 if k == 'suppression'))
+orders = {n: np.log10(need6 / v) for n, k, v in rows6 if k == 'suppression'}
+check('Table 6 l = 2 multipole, orders of magnitude short', orders['l = 2 multipole'], 10, 0)
+check('Table 6 relativistic and classical, orders of magnitude short', orders['Relativistic and classical'], 3, 0)
+check('Sec. 5.4 / Table 6 spacecraft spin, orders of magnitude short', orders['Spacecraft spin'], 8, 0)
+external = [orders[n] for n in ('Eclipse thermal recoil', 'Atmospheric drag', 'Relativistic and classical', 'Spacecraft spin')]
+check('Sec. 5.7 external mechanisms, fewest orders short', min(external), 1, 0)
+check('Sec. 5.7 external mechanisms, most orders short', max(external), 8, 0)
 
 # Section 6 and Table 7
 for row in table7(fl):
@@ -241,9 +246,9 @@ for row in table9(fl, f4, f5, gg):
 # Appendix A
 a = appendix_a()
 check('App. A rp (1e6 m)', a['rp'] / 1e6, 6.9325, 4)
-check('App. A Vinf^2 (1e8 m^2/s^2)', a['vinf2'] / 1e8, 1.0793, 4)
-check('App. A 2GM/rp (1e8 m^2/s^2; printed 1.1500, value 1.14995)', a['grav'] / 1e8, 1.150, 3)
-check('App. A Vp^2 (1e8 m^2/s^2)', a['vp2'] / 1e8, 2.2293, 4)
+check('App. A Vinf^2 (1e8 m^2/s^2)', a['vinf2'] / 1e8, 1.07931, 5)
+check('App. A 2GM/rp (1e8 m^2/s^2)', a['grav'] / 1e8, 1.14995, 5)
+check('App. A Vp^2 (1e8 m^2/s^2)', a['vp2'] / 1e8, 2.22926, 5)
 check('App. A Vp (km/s)', a['vp'] / 1e3, 14.931, 3)
 check('App. A eps - 1', a['eps_minus_1'], 1.877, 3)
 check('App. A cos 14.17', a['cos_in'], 0.96957, 5)

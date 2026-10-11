@@ -46,7 +46,7 @@ python check_against_paper.py
 ```
 
 `check_against_paper.py` recomputes the numbers in the text, Tables 1 to 9 and Appendices A and C, compares each with the
-value printed in the paper at the printed precision, and prints one PASS or FAIL line per number (217 in all, in about
+value printed in the paper at the printed precision, and prints one PASS or FAIL line per number (222 in all, in about
 15 seconds). Each of the other scripts prints its own section. `python figures.py` redraws the three figures.
 
 Everything runs offline. `juno_covariance.py --horizons` fetches the Juno perigee state again from the JPL Horizons API

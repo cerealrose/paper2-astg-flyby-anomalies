@@ -66,5 +66,5 @@ if __name__ == '__main__':
           f" at the relative speed {j['exp_relative']:.4f} against {j['dv']:.4f}, {(1 - j['exp_relative'] / j['dv']) * 100:.1f}% less")
     pred = astg.astg_dvp(astg.load_flybys()['Juno'], astg.anomalous_fit(astg.load_flybys())['lam'])
     need = pred - 0.200
-    print(f"the impulse is a factor of {need / j['dv']:.1f} short of the required suppression ({need:.2f} mm/s) "
-          f"and a factor of {pred / j['dv']:.1f} below the prediction of Eq. (5) ({pred:.2f} mm/s)")
+    print(f"the impulse is a factor of {pred / j['dv']:.1f} short of the prediction of Eq. (5) ({pred:.2f} mm/s) "
+          f"and a factor of {need / j['dv']:.1f} short of the required suppression ({need:.2f} mm/s)")
