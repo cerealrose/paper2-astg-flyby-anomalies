@@ -1,4 +1,9 @@
-# LaTeX build artifacts
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# LaTeX build files
 *.aux
 *.log
 *.bbl
@@ -8,11 +13,7 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
-*Notes.bib
-
-# Python
-__pycache__/
-*.pyc
 
 # OS
 .DS_Store
+Thumbs.db

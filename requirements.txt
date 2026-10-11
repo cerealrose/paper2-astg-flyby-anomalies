@@ -1,6 +1,6 @@
-# Python dependencies for the scripts in scripts/
-# Tested with Python 3.12; earlier versions of each package are very
-# likely to also work, as none of the scripts rely on recent API additions.
-
+# Tested with Python 3.13, numpy 2.5, scipy 1.18, matplotlib 3.11, pymsis 0.13 and requests 2.34
 numpy>=1.24
 scipy>=1.10
+matplotlib>=3.7
+pymsis>=0.10        # NRLMSISE-00 (version=0)
+requests>=2.28      # only for juno_covariance.py --horizons

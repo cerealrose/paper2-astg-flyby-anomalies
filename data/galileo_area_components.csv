@@ -1,0 +1,6 @@
+component,axial_min_m2,axial_max_m2,broadside_min_m2,broadside_max_m2
+Furled high-gain antenna and sunshade,3.1,6.2,2.0,3.4
+Rotor bus,4.5,5.7,4.4,5.9
+Despun section and attached probe,1.3,1.8,2.4,3.2
+"Science boom, 10.9 m, spin-averaged",0.0,0.1,0.7,1.4
+"RTG booms and generators, spin-averaged",0.6,1.0,1.4,2.2
